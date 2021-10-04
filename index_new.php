@@ -9,7 +9,7 @@
 
   require_once "config.php";
 
-  $query = sprintf("SELECT newsHeader, newsTitle, newsText, newsDate FROM news");
+  $query = sprintf("SELECT newsHeader, newsTitle, newsText, newsDate FROM news ORDER BY newsDate DESC");
   $result = mysqli_query($link, $query);
 
   readfile('headerContent.html');//IMPORTANT!!!
